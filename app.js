@@ -5,5 +5,5 @@ const fecha = document.getElementById("fecha");
 fecha.textContent = new Date().toLocaleString();
 
 btn.addEventListener("click", () => {
-  msg.textContent = "Funciona el JS. CI probado con Webapp.io.";
+  msg.textContent = "Funciona el JS. CI probado con GitHub Actions.";
 });
