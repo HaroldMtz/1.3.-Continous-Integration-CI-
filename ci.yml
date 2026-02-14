@@ -1,0 +1,24 @@
+name: CI (HTML simple)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repo
+        uses: actions/checkout@v4
+
+      - name: Ver qué archivos hay
+        run: ls -la
+
+      - name: Revisar que exista index.html
+        run: test -f index.html
+
+      - name: Revisar que exista app.js
+        run: test -f app.js
+
+      - name: Revisar que exista styles.css
+        run: test -f styles.css
